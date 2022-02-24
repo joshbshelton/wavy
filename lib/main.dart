@@ -1,6 +1,6 @@
 // Joshua Shelton
-// February 16, 2022
-// First Dart App -- Module 4
+// February 23, 2022
+// Improving upon the start page... added the foundation for logins.
 
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
@@ -23,7 +23,29 @@ class MyApp extends StatelessWidget {
                     fontWeight: FontWeight.w900,
                     fontSize: 32.0)),
             centerTitle: true),
-        body: Text("Welcome to WAVY, the best app for music organization!"),
+        body: Column(
+          // ignore: prefer_const_literals_to_create_immutables
+          children: [
+            Text('Login', style: TextStyle(fontSize: 16.0)),
+
+            // Username field.
+            TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Username',
+              ),
+            ),
+
+            // Password field.
+            TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Password',
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
